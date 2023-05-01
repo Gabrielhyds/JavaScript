@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <script>
+        //Aplicação calculadora dinâmica
+        //Queremos um número inicial
+        //Queremos um sinal (tipo de operação)
+        //quero um número final
+
+        //declaração variaveis que armazenará oq o usuário digitar
+        var numeroInicial = prompt("Digite o primeiro valor: ");
+        var sinal = prompt("Digite o sinal da operação: ");
+
+        //equanto o a variavel sinal for diferente das quatro citadas no while repete a pergunta.
+        while (sinal != "-" && sinal != "+" && sinal != "*" && sinal != "/") {
+            alert("Por gentileza, informe um sinal válido");
+            sinal = prompt("Digite o sinal da operação: ");
+        }
+
+        //declaração variaveis que armazenará oq o usuário digitar
+        var numeroFinal = prompt("Digite o segundo valor: ");
+
+        //Converter string para numero.
+        numeroInicial = parseInt(numeroInicial);
+        numeroFinal = parseInt(numeroFinal);
+
+        //declarar a variavel resultado para receber o valor final
+        var resultado = 0;
+
+        //se o sinal for +  
+        if (sinal == "+") {
+            //atribui a variavel resultado o valor dos números digitados pelo usuário
+            resultado = numeroInicial + numeroFinal;
+            //exibi o resultado da operação
+            alert("Valor obtido é: " + resultado);
+        } else if (sinal == "-") {
+            //atribui a variavel resultado o valor dos números digitados pelo usuário
+            resultado = numeroInicial - numeroFinal;
+            //exibi o resultado da operação
+            alert("Valor obtido é: " + resultado);
+        } else if (sinal == "*") {
+            //atribui a variavel resultado o valor dos números digitados pelo usuário
+            resultado = numeroInicial * numeroFinal;
+            //exibi o resultado da operação
+            alert("Valor obtido é: " + resultado);
+        } else if (sinal == "/") {
+            //atribui a variavel resultado o valor dos números digitados pelo usuário
+            resultado = numeroInicial / numeroFinal;
+            //exibi o resultado da operação
+            alert("Valor obtido é: " + resultado);
+        }
+    </script>
+
+</body>
+
+</html>

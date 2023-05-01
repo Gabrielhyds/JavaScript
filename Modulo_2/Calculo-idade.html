@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio Js</title>
+</head>
+
+<body>
+    <script>
+        //variavel que armazena o ano em que ele nasceu
+        var anoNascimento = prompt("em que ano você nasceu? ");
+
+        //verificação se o valor de nascimento for maior que o ano atual entra no loop
+        while (anoNascimento >= 2022) {
+            //msg ao usuário hahaha
+            alert("ei você está no futuro?? Por favor informe seu nascimento corretamente.");
+            //fica em loop o prompt até o ano de nascimento for menor que o ano atual
+            anoNascimento = prompt("Em que ano você nasceu? ");
+        }
+        //aqui o usuário digita o ano atual
+        var anoAtual = prompt("E qual o ano atual??");
+
+        //atribuimos a variavel idadeFinal a subtração do ano atual e a data de nascimento do usuário
+        var idadeFinal = anoAtual - anoNascimento;
+
+        //Exibindo ao usuário sua idade :)
+        alert("Sua idade é: " + idadeFinal);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //continuação da aula de funções e instância de objetos
+        function Pessoa() {
+            this.nome = "josé";
+            this.idade = 18;
+            this.printNome = function(numero) {
+                alert(numero);
+            }
+            this.returnAnimal = function(animal) {
+                return animal;
+            }
+        }
+
+        // function Animal(nome, peso) {
+        //     if (nome == undefined) {
+        //         nome = "Cachorro";
+        //     }
+        //     if (peso == undefined) {
+        //         peso = "5kg";
+        //     }
+        //     this.nome = nome;
+        //     this.peso = peso;
+        // }
+
+        function Animal() {
+            this.nome = 'Cachorro';
+            this.raca = "bulldog";
+        }
+
+        var pessoa = new Pessoa();
+
+        var animal = new Animal();
+
+        alert(pessoa.returnAnimal(animal.raca));
+
+
+        // var pessoa = new Pessoa();
+        // var pessoa_2 = new Pessoa();
+        // pessoa_2.nome = "joao";
+        // pessoa.printNome(pessoa_2.nome)
+
+        // animal2 = new Animal("Gato", '5kg');
+        // alert(animal1.nome);
+        // alert(animal2.peso);
+    </script>
+</body>
+
+</html>

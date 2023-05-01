@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .conteudo h2 span{
+            font-size: 15px;
+            cursor:pointer;
+        }
+        .conteudo p{
+            overflow: hidden;
+            height: 0px;
+            transition: 1s;
+        }
+        .mostrar{
+            height: 200px !important;
+        }
+    </style>
+    <div class="conteudo">
+        <h2>titulo do conteudo <span>ver mais!</span></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eros felis, laoreet a felis at, finibus pharetra sapien. Pellentesque nec maximus ex. Proin consectetur magna eu sapien pulvinar, a dapibus massa suscipit. Duis scelerisque venenatis massa, sed facilisis nibh sagittis eu. Nunc odio eros, lobortis vel nisi eu, molestie mattis diam. Suspendisse tempor porta tellus vitae scelerisque. Quisque in risus nec sem interdum feugiat at iaculis ipsum. Sed aliquet eu urna vel consequat. Nam tristique id dolor a pretium. Fusce mollis nisl at orci suscipit, nec tincidunt lacus sollicitudin.</p>
+    </div>
+    <script>
+       var span = document.querySelectorAll('.conteudo span');
+       span.addEventListener('click',function(){
+            var conteudo = document.querySelector('.conteudo p');
+            if(conteudo.classList.contains('mostrar')){
+                span.innerHTML = "ver mais";
+                conteudo.classList.remove("mostrar");
+                //alert("esconda o conteudo");
+            }else{
+                span.innerHTML = "Ocultar";
+                conteudo.classList.add("mostrar");
+                //alert("mostre o conteudo");
+            }
+        })
+    </script>
+</body>
+</html>

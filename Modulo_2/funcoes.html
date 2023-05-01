@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Soma() {
+            var n1 = 10;
+            var n2 = 20;
+            var res = n1 + n2;
+            console.log("A soma dos valores " + n1 + " e " + n2 + " é: " + res);
+            console.log('-------------------------');
+        }
+
+        function testes() {
+            //executado quando chamar a função.
+            console.log('chamando a função testes');
+            console.log('-------------------------');
+        }
+
+        function testes2(nome, idade) {
+            console.log('O nome passado é: ' + nome);
+            console.log('-------------------------');
+            console.log('A idade passada é: ' + idade);
+            console.log('-------------------------');
+        }
+
+        function pegarNome(parametro) {
+            if (parametro == 1) {
+                return "Gabriel";
+            } else {
+                return "Outro nome";
+            }
+        }
+
+        //testes();
+        //testes2("José", 19);
+        //Soma();
+
+        var nome = pegarNome(1);
+
+        console.log(nome);
+
+        /*Aula 6 - Mais sobre funções*/
+        //Outras formas de declarar funcões
+        // é possivel colocar "var" , "const" , "let"
+
+        var func = function() {
+                //msg ao usuario
+                //alert("Hello world");
+            }
+            //chamando a função
+        func();
+
+        //declarar a função e já executar logo em seguida
+        (function() {
+            //msg ao usuario
+            alert("Hello world");
+        })();
+    </script>
+</body>
+
+</html>

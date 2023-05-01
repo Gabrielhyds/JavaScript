@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes</title>
+</head>
+
+<body>
+    <script>
+        class Animal {
+            //construtor
+            constructor(nome) {
+                this.nome = nome;
+            }
+
+            //métodos
+            printNome() {
+                return this.nome;
+            }
+
+        }
+
+        class Cachorro extends Animal {
+            constructor(nome) {
+                super(nome);
+                this.raca = 'bulldog';
+            }
+
+            //metodo
+            printRaca() {
+                return this.raca;
+            }
+        }
+
+
+
+        //testando o extends
+        //agora a classe cachorro tem todos os metodos e atributos de Animal
+        cachorro = new Cachorro("Maltes");
+        alert(cachorro.printRaca());
+
+        animal = new Animal('Gato');
+        alert(animal.printNome());
+    </script>
+</body>
+
+</html>
