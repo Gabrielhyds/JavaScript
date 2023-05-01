@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+            //block scope
+
+            {
+                //vai ficar definido apenas nesse escopo
+                var nome = "gabriel";
+                
+                let testes =  function(){
+                    console.log("ola");
+                }
+                function teste(){
+                    console.log("ola");
+                }
+            }
+            console.log(nome);
+            teste();
+        </script>
+</body>
+</html>
